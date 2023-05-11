@@ -12,8 +12,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "especialidad")
-public class Especialidad {
+@Entity(name = "especialidades")
+public class Especialidades {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,28 +1,28 @@
 package com.segales.clinica.service;
 
-import com.segales.clinica.model.Especialidad;
+import com.segales.clinica.model.Especialidades;
 import com.segales.clinica.service.Impl.IEspecialidadService;
 
 import java.util.List;
 
 public class EspecialidadService implements IEspecialidadService {
     @Override
-    public Especialidad create(Especialidad especialidad) {
+    public Especialidades create(Especialidades especialidades) {
         return null;
     }
 
     @Override
-    public Especialidad update(Especialidad especialidad) {
+    public Especialidades update(Especialidades especialidades) {
         return null;
     }
 
     @Override
-    public Especialidad findById(Integer id) {
+    public Especialidades findById(Integer id) {
         return null;
     }
 
     @Override
-    public List<Especialidad> findAll() {
+    public List<Especialidades> findAll() {
         return null;
     }
 

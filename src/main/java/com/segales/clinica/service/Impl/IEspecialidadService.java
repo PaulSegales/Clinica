@@ -1,14 +1,14 @@
 package com.segales.clinica.service.Impl;
 
-import com.segales.clinica.model.Especialidad;
+import com.segales.clinica.model.Especialidades;
 
 import java.util.List;
 
 public interface IEspecialidadService {
 
-    public Especialidad create(Especialidad especialidad);
-    public Especialidad update(Especialidad especialidad);
-    public Especialidad findById(Integer id);
-    public List<Especialidad> findAll();
+    public Especialidades create(Especialidades especialidades);
+    public Especialidades update(Especialidades especialidades);
+    public Especialidades findById(Integer id);
+    public List<Especialidades> findAll();
     public void delete(Integer id);
 }

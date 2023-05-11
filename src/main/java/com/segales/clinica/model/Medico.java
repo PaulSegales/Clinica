@@ -1,9 +1,6 @@
 package com.segales.clinica.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,7 +18,12 @@ public class Medico {
     private Integer id;
     private String nombres;
     private String apellidos;
-    private List<Especialidad> especialidad;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "medico_especialidad",
+            joinColumns = @JoinColumn(name = "id_medico", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "id_especialidad", referencedColumnName = "id"))
+    private List<Especialidades> especialidades;
     private String dni;
     private int edad;
     private String telefono;
