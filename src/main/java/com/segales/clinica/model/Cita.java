@@ -1,15 +1,11 @@
 package com.segales.clinica.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
@@ -20,8 +16,13 @@ public class Cita {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer idMedico;
-    private Integer idPaciente;
-    private LocalDate fecha;
-    private LocalTime hora;
+
+    @ManyToOne
+    @JoinColumn(name = "id_paciente")
+    private Paciente paciente;
+    @OneToOne
+    @JoinColumn(name = "id_horario")
+    private Horario horario;
+    private LocalDateTime fechaReservada;
+    private String estado; //disponible, reservado, vencido
 }

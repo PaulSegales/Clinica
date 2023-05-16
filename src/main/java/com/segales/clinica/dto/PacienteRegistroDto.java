@@ -1,4 +1,4 @@
-package com.segales.clinica.model;
+package com.segales.clinica.dto;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,11 +13,8 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "paciente")
-public class Paciente {
+public class PacienteRegistroDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nombres;
     private String apellidos;
@@ -27,4 +24,7 @@ public class Paciente {
     private LocalDate fechaNacimiento;
     private int edad;
     private Boolean estado;
+    private String password;
+
+
 }

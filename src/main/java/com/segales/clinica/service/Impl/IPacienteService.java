@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface IPacienteService {
 
-    public Paciente create(Paciente paciente);
-    public Paciente update(Paciente paciente);
-    public Paciente findById(Integer id);
-    public List<Paciente> findAll();
-    public void delete(Integer id);
+    Paciente create(Paciente paciente) throws Exception;
+    Paciente update(Paciente paciente) throws Exception;
+    Paciente findById(Integer id) throws Exception;
+    List<Paciente> findAll() throws Exception;
+    Paciente delete(Integer id) throws Exception;
 }

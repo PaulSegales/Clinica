@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface ICitaService {
 
-    public Cita create(Cita cita);
-    public Cita update(Cita cita);
-    public Cita findById(Integer id);
-    public List<Cita> findAll();
-    public void delete(Integer id);
+    Cita create(Cita cita) throws Exception;
+    Cita update(Cita cita) throws Exception;
+    Cita findById(Integer id) throws Exception;
+    List<Cita> findAll() throws Exception;
+    Cita delete(Integer id) throws Exception;
 }

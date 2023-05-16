@@ -19,11 +19,12 @@ public class Historial {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private Integer idPaciente;
     private Integer idMedico;
     private LocalDateTime fechaHoraCreacion;
     private String sintomas;
     private String diagnostico;
     private String tratamiento;
-
+    private boolean estado;
 }

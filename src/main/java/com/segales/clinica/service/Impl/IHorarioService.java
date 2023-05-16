@@ -6,9 +6,10 @@ import java.util.List;
 
 public interface IHorarioService {
 
-    public Horario create(Horario horario);
-    public Horario update(Horario horario);
-    public Horario findById(Integer id);
-    public List<Horario> findAll();
-    public void delete(Integer id);
+    Horario create(Horario horario) throws Exception;
+    Horario update(Horario horario) throws Exception;
+    Horario findById(Integer id) throws Exception;
+    List<Horario> findAll() throws Exception;
+    //List<Horario> findByMedicoId(Integer id) throws Exception;
+    Horario delete(Integer id) throws Exception;
 }

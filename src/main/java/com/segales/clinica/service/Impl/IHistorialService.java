@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface IHistorialService {
 
-    public Historial create(Historial historial);
-    public Historial update(Historial historial);
-    public Historial findById(Integer id);
-    public List<Historial> findAll();
-    public void delete(Integer id);
+    Historial create(Historial historial) throws Exception;
+    Historial update(Historial historial) throws Exception;
+    Historial findById(Integer id) throws Exception;
+    List<Historial> findAll() throws Exception;
+    Historial delete(Integer id) throws Exception;
 }
